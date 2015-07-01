@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="header"></h1>
+
+    <script src="jquery.js"></script>
+    <script src="slabtext.js"></script>
+    <script src="randomColor.js"></script>
+    <script>
+
+        console.log("Hello!");
+
+        var manifesto = [
+            "Rule #1: If you’re not having fun, you’re the asshole.",
+            "Maestro is a longform narrative.",
+            "You are always playing a character.",
+            "Bonus points are for the audience, not the improvisor.",
+            "If every scene is hilarious you’re doing it wrong. ",
+            "Good is to Amazing as Try is to Do.",
+            "Eliminating players is supposed to be enjoyable.",
+            "The audience should feel collectively. ",
+            "Being mischevious is not the same as being a jerk. ",
+            "If you play Maestro to win, you fundamentally misunderstand Maestro. And improv. And life.  ",
+            "Do before you judge, the directors will decide.",
+            "Tickets sell because the show is good not easy. ",
+            "Make everything count because it does. ",
+            "The game doesn’t suck, you suck at the game. ",
+            "Get away with doing a dramatic scene. ",
+            "Be vulnerable. ",
+            "Say “I have a secret.”",
+            "Your score is influenced by your previous scenes.",
+            "Fuck yourself over. ",
+            "Throw your scene partner under the bus. ",
+            "Surprise the audience by lowering their expectations. ",
+            "Surprise yourself by lowering your expectations. ",
+            "What makes this game work?",
+            "How can I break this game? ",
+            "Play absurdly high status.",
+            "Play absurdly low status. ",
+            "Make the audience want to date you. ",
+            "Make the audience hate you. ",
+            "Dress better than everyone else. ",
+            "Score a “2” on purpose. ",
+            "Make improv appear accessible. ",
+            "Make improv appear impossible. ",
+            "Do less and do it slower.",
+            "The most subtle hesitation is extraordinarily obvious. ",
+            "Lose on purpose.",
+            "Make the audience cry. ",
+            "Maestro All-Stars is not really Maestro.",
+            "Confusion is death.",
+            "What does the audience expect?",
+            "Pay attention to how they say it.",
+            "Play it straight when no one else will. ",
+            "Specificity is funny, detail is boring. ",
+            "Drop your clever idea.",
+            "Cross the line so you know where it is. ",
+            "Restrictions enable you. ",
+            "Conflict comes best by its own volition.",
+            "Double down."
+        ];
+
+        function randomize(maximum, minimum) {
+            return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+        }
+
+        $("h1").html(manifesto[randomize(0, manifesto.length)]);
+        $("h1").slabText({
+            "fontRatio": 2.5
+        });
+
+        $("body").css("background-color", randomColor({ luminosity: "dark" }));
+
+        $("body").keypress(function() {
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: #FDF3E7;
+    background-color: #3B3738;
+}
+
+h1 {
+    padding-top: 5px;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0 auto;
+}
+
+.slabtexted .slabtext
+{
+    display:-moz-inline-box;
+    display:inline-block;
+    white-space:nowrap;
+}
+.slabtextinactive .slabtext
+{
+    display:inline;
+    white-space:normal;
+    font-size:1em !important;
+    letter-spacing:inherit !important;
+    word-spacing:inherit !important;
+    *letter-spacing:0 !important;
+    *word-spacing:0 !important;
+}
+.slabtextdone .slabtext
+{
+    display:block;
+}
